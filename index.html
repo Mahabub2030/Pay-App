@@ -33,16 +33,23 @@
                             <div class="stat-desc">21% more than last month</div>
                         </div>
                     </div>
+                    <!-- end here  -->
+
+                    <!-- acsh out section start here -->
+
+
+                    <!-- acsh out section ends  here -->
+                     
                     <div class="divider"></div>
                     <!-- feature btn add here -->
                     <div>
-                        <button class="btn btn-lg">Add-Money</button>
-                        <button class="btn btn-lg">Cash-Out</button>
+                        <button id="btn-balance-add" class="btn btn-lg">Add-Money</button>
+                        <button id="btn-cashout-money" class="btn btn-lg">Cash-Out</button>
                     </div>
                     <div class="divider"></div>
 
-                    <!-- from section add here -->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <!-- add mone section add here -->
+                    <div id="add-money-from" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                           <div class="form-control">
                             <label class="label">
@@ -65,6 +72,31 @@
                         </form>
                       </div>
                     <!-- from section endhere -->
+
+                    <!-- cash out section start here-->
+                    <div id="cashout-form"  class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Amount</span>
+                          </label>
+                          <input id="input-amount-cashout" type="text" autocomplete="off" placeholder="add-your mony" class="input input-bordered" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Pin</span>
+                          </label>
+                          <input id="input-pin-cashout" autocomplete="off"  type="password" placeholder="Enter your Pin Here" class="input input-bordered" required />
+                          <!-- <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                          </label> -->
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="btn-casout-money" class="btn btn-primary">Cash-Out</button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- cash out section ends here-->
                 </div>
             </div>
         </div>
