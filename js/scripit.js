@@ -1,8 +1,8 @@
-document.getElementById('btn-add-money').addEventListener('click',function(event){
-    event.preventDefault();
-
+// document.getElementById('btn-add-money').addEventListener('click',function(event){
+//     event.preventDefault();
     
 
+ 
     // const addMoney = document.getElementById('input-amount').value;
     // const addMoneyNumber = parseFloat(addMoney);
     // const pinNumber = document.getElementById('input-pin').value;
@@ -19,34 +19,35 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
     // else{
     //     alert('you pin is wrong ')
     // }  
-});
+// });
+
 
 // cash out section start here
 
-document.getElementById('btn-casout-money').addEventListener('click', function(event) {
-    event.preventDefault()
+// document.getElementById('btn-casout-money').addEventListener('click', function(event) {
+//     event.preventDefault()
 
-    const csasOutMoney = document.getElementById('input-amount-cashout').value;
-    const cashOutNumber = parseFloat(csasOutMoney);
-    const pinNumber = document.getElementById('input-pin-cashout').value;
+//     const csasOutMoney = document.getElementById('input-amount-cashout').value;
+//     const cashOutNumber = parseFloat(csasOutMoney);
+//     const pinNumber = document.getElementById('input-pin-cashout').value;
 
-    console.log(csasOutMoney, pinNumber)
+//     console.log(csasOutMoney, pinNumber)
 
-    if(pinNumber === '4567'){
-        console.log('Your Sucseed')
+//     if(pinNumber === '4567'){
+//         console.log('Your Sucseed')
 
-        const balance = document.getElementById('current-balance').innerText;
-        const balanceNumber = parseFloat(balance);
-        const CurrenBalance = balanceNumber - cashOutNumber;
+//         const balance = document.getElementById('current-balance').innerText;
+//         const balanceNumber = parseFloat(balance);
+//         const CurrenBalance = balanceNumber - cashOutNumber;
 
-        document.getElementById('current-balance').innerText = CurrenBalance;
+//         document.getElementById('current-balance').innerText = CurrenBalance;
 
-    }
-    else{
-        alert('Warning Your Falid')
-    }
+//     }
+//     else{
+//         alert('Warning Your Falid')
+//     }
 
-});
+// });
 
 // feuther section start here
 
@@ -63,6 +64,23 @@ document.getElementById('btn-casout-money').addEventListener('click', function(e
 //     document.getElementById('cashout-form').classList.add('hidden');
 // });
 
+
+console.log('second part')
+
+document.getElementById('btn-add-money').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // console.log('btn add clike');
+
+    // getInputFieldValueById();
+
+    const addMoney = getInputFieldValueById('input-amount');
+    const pinNumber = getInputFieldValueById('input-pin-number');
+
+    console.log('adde mony for parameters', addMoney,pinNumber)
+
+
+})
 
 
 
