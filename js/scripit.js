@@ -65,22 +65,31 @@
 // });
 
 
-console.log('second part')
 
 document.getElementById('btn-add-money').addEventListener('click', function(e) {
     e.preventDefault();
 
-    // console.log('btn add clike');
-
-    // getInputFieldValueById();
-
+    
     const addMoney = getInputFieldValueById('input-amount');
     const pinNumber = getInputFieldValueById('input-pin-number');
 
     console.log('adde mony for parameters', addMoney,pinNumber)
 
+    if(pinNumber === 123){
+        const balance = getTextFieldValueById('current-balance');
 
-})
+        console.log('your are gret',balance, addMoney)
+
+    }
+    else{
+        alert('your Pin Is wrong')
+    }
+
+
+
+
+});
+
 
 
 
