@@ -1,15 +1,19 @@
+// shread file here
 
-function getInputFieldValueById(id){
+// function getInpuFildValueById(){
+//     console.log('will get by shread id')
+//     const addMony = document.getElementById('input-fild-amount').vaule;
+//     return addMony;
+// }
+
+// function getInputTexValueById(){
+//     console.log('will some thing')
+// }
+
+function getInputFildValueById(id){
     const inputValue = document.getElementById(id).value;
-    const InputNumber = parseFloat(inputValue);
+    return inputValue;
 
-
-    console.log(inputValue, InputNumber)
-    return InputNumber;
-};
-
-function getTextFieldValueById (id){
-    const textValue = document.getElementById(id).innerText;
-    const textNumber = parseFloat(textValue);
-    return textNumber;
 }
+
+

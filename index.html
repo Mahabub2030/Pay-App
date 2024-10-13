@@ -1,118 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay-aPP</title>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <body>
+    <header></header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay__aPP</title>
-    <!--  -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <!-- header section start here -->
-    <header>
-
-    </header>
-    <!-- header section ends here -->
-
-    <!-- main section start here -->
-    <main class="flex justify-center mt-10">
-        <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-                <div class="artboard artboard-demo phone-2">
-                    <!-- accont -blacnce -->
-                    <div class="stats shadow">
-                        <div class="stat">
-                            <div class="stat-title">Total Amount</div>
-                            <div id="current-balance" class="stat-value">9400</div>
-                            <div class="stat-desc">21% more than last month</div>
-                        </div>
-                    </div>
-                    <!-- end here  -->
-
-                    <!-- acsh out section start here -->
-
-
-                    <!-- acsh out section ends  here -->
-                     
-                    <div class="divider"></div>
-                    <!-- feature btn add here -->
-                    <div>
-                        <button id="btn-balance-add" class="btn btn-lg">Add-Money</button>
-                        <button id="btn-cashout-money" class="btn btn-lg">Cash-Out</button>
-                    </div>
-                    <div class="divider"></div>
-
-                    <!-- add mone section add here -->
-                    <div id="add-money-from" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Amount</span>
-                            </label>
-                            <input id="input-amount" type="text" autocomplete="off" placeholder="add-your mony" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Pin</span>
-                            </label>
-                            <input id="input-pin-number" autocomplete="off"  type="password" placeholder="Enter your Pin Here" class="input input-bordered" required />
-                            <!-- <label class="label">
-                              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                            </label> -->
-                          </div>
-                          <div class="form-control mt-6">
-                            <button id="btn-add-money" class="btn btn-primary">Add-Money</button>
-                          </div>
-                        </form>
-                      </div>
-                    <!-- from section endhere -->
-
-                    <!-- cash out section start here-->
-                    <div id="cashout-form"  class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                      <form class="card-body">
-                        <div class="form-control">
-                          <label class="label">
-                            <span class="label-text">Amount</span>
-                          </label>
-                          <input id="input-amount-cashout" type="text" autocomplete="off" placeholder="add-your mony" class="input input-bordered" required />
-                        </div>
-                        <div class="form-control">
-                          <label class="label">
-                            <span class="label-text">Pin</span>
-                          </label>
-                          <input id="input-pin-cashout" autocomplete="off"  type="password" placeholder="Enter your Pin Here" class="input input-bordered" required />
-                          <!-- <label class="label">
-                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                          </label> -->
-                        </div>
-                        <div class="form-control mt-6">
-                          <button id="btn-casout-money" class="btn btn-primary">Cash-Out</button>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- cash out section ends here-->
+    <main>
+     
+      <div class="flex mx-auto">
+        <div class="mockup-phone border-primary">
+          <div class="camera"></div>
+          <div class="display">
+            <div class="artboard artboard-demo phone-2">
+              <!-- amout -->
+              <div class="stats shadow">
+                <div class="stat">
+                  <div class="stat-title text-xl">Total Amount</div>
+                  <div class="stat-value" id="curren-amount">9400</div>
                 </div>
+              </div>
+              <!-- btn -->
+               <div class="divider"></div>
+
+               <div class="flex gap-10">
+                <button class="btn btn-lg" id="btn-add-mony">Add-Mony</button>
+                <button class="btn btn-lg" id="btn-cash-out">Cash-out</button>
+               </div>
+
+              <div class="divider"></div>
+
+              <div>
+                <div
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                >
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Amount</span>
+                      </label>
+                      <input id="input-fild-amount"
+                        type="text"
+                        placeholder="Amount"
+                        class="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin</span>
+                      </label>
+                      <input id="input-fild-pin"
+                        type="password"
+                        placeholder="Enter you pin"
+                        class="input input-bordered"
+                        required
+                      />
+                      <label class="label">
+                        <a href="#" class="label-text-alt link link-hover"
+                          >Forgot password?</a
+                        >
+                      </label>
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn btn-primary" id="add-btn">Add-Money</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </main>
-    <!-- main section ends here -->
 
-    <!-- footer section start here -->
-    <footer>
-
-    </footer>
-    <!-- footer section ends here -->
-
-    <!-- javascritit lin add here -->
-    <script src="./js/Utiliats.js"></script>
+    <footer></footer>
     <script src="./js/scripit.js"></script>
-</body>
-
+    <script src="./js/Utiliats.js"></script>
+  </body>
 </html>
