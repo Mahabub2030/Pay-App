@@ -15,9 +15,9 @@
   <body>
     <header></header>
 
-    <main>
-     
-      <div class="flex mx-auto">
+    <main class="w-full bg-green-600">
+    
+      <div class="flex mx-auto ">
         <div class="mockup-phone border-primary">
           <div class="camera"></div>
           <div class="display">
@@ -32,17 +32,19 @@
               <!-- btn -->
                <div class="divider"></div>
 
-               <div class="flex gap-10">
+               <div class="gap-10  text-center ">
                 <button class="btn btn-lg" id="btn-add-mony">Add-Mony</button>
                 <button class="btn btn-lg" id="btn-cash-out">Cash-out</button>
+                <button class="btn btn-lg  mt-2" id="btn-cash-out">Transation</button>
                </div>
 
               <div class="divider"></div>
 
               <div>
                 <div
-                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
                 >
+                 <!-- add money start here -->
                   <form class="card-body">
                     <div class="form-control">
                       <label class="label">
@@ -71,6 +73,41 @@
                     </div>
                   </form>
                 </div>
+                <!-- add money ends here -->
+
+                <!-- cash out start here -->
+                <div
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl "
+                >
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">cash Out</span>
+                      </label>
+                      <input id="input-fild-cashOut"
+                        type="text"
+                        placeholder="cash Out"
+                        class="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin</span>
+                      </label>
+                      <input id="input-fild-cashOutPin"
+                        type="password"
+                        placeholder="Enter you pin"
+                        class="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div class="form-control mt-6">
+                      <button class="btn btn-primary" id="cashOut-btn"> cash Out</button>
+                    </div>
+                  </form>
+                   <!-- cashout ends here -->
+                </div>
               </div>
             </div>
           </div>
@@ -80,6 +117,8 @@
 
     <footer></footer>
     <script src="./js/Utiliats.js"></script>
+    <script src="./js/cashOut.js"></script>
+    <script src="./js/Feather.js"></script>
     <script src="./js/scripit.js"></script>
   </body>
 </html>
