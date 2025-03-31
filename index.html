@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pay-aPP</title>
   </head>
@@ -16,8 +16,7 @@
     <header></header>
 
     <main class="w-full bg-green-600">
-    
-      <div class="flex mx-auto ">
+      <div class="flex mx-auto">
         <div class="mockup-phone border-primary">
           <div class="camera"></div>
           <div class="display">
@@ -30,27 +29,31 @@
                 </div>
               </div>
               <!-- btn -->
-               <div class="divider"></div>
+              <div class="divider"></div>
 
-               <div class="gap-10  text-center ">
+              <div class="gap-10 text-center">
                 <button class="btn btn-lg" id="btn-add-mony">Add-Mony</button>
                 <button class="btn btn-lg" id="btn-cash-out">Cash-out</button>
-                <button class="btn btn-lg  mt-2" id="btn-cash-out">Transation</button>
-               </div>
+                <button class="btn btn-lg mt-2" id="btn-transtion">
+                  Transation
+                </button>
+              </div>
 
               <div class="divider"></div>
 
               <div>
                 <div
-                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
+                  id="add-money-from"
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
                 >
-                 <!-- add money start here -->
+                  <!-- add money start here -->
                   <form class="card-body">
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text">Amount</span>
                       </label>
-                      <input id="input-fild-amount"
+                      <input
+                        id="input-fild-amount"
                         type="text"
                         placeholder="Amount"
                         class="input input-bordered"
@@ -61,7 +64,8 @@
                       <label class="label">
                         <span class="label-text">Pin</span>
                       </label>
-                      <input id="input-fild-pin"
+                      <input
+                        id="input-fild-pin"
                         type="password"
                         placeholder="Enter you pin"
                         class="input input-bordered"
@@ -69,7 +73,9 @@
                       />
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary" id="add-btn">Add-Money</button>
+                      <button class="btn btn-primary" id="add-btn">
+                        Add-Money
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -77,14 +83,16 @@
 
                 <!-- cash out start here -->
                 <div
-                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl "
+                  id="casout-from"
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
                 >
                   <form class="card-body">
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text">cash Out</span>
                       </label>
-                      <input id="input-fild-cashOut"
+                      <input
+                        id="input-fild-cashOut"
                         type="text"
                         placeholder="cash Out"
                         class="input input-bordered"
@@ -95,7 +103,8 @@
                       <label class="label">
                         <span class="label-text">Pin</span>
                       </label>
-                      <input id="input-fild-cashOutPin"
+                      <input
+                        id="input-fild-cashOutPin"
                         type="password"
                         placeholder="Enter you pin"
                         class="input input-bordered"
@@ -103,11 +112,23 @@
                       />
                     </div>
                     <div class="form-control mt-6">
-                      <button class="btn btn-primary" id="cashOut-btn"> cash Out</button>
+                      <button class="btn btn-primary" id="cashOut-btn">
+                        cash Out
+                      </button>
                     </div>
                   </form>
-                   <!-- cashout ends here -->
+                  <!-- cashout ends here -->
+                  
+                 
                 </div>
+                <!-- transction start here -->
+                <div class="hidden"  id="transtion-id">
+                  <h2 class="text-xl text-center">Transtion history</h2>
+                  <div id="transaction-content" class="space-y-3">
+
+                  </div>
+                </div>
+                 <!-- transction ends here -->
               </div>
             </div>
           </div>

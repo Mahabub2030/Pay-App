@@ -21,13 +21,26 @@ document.getElementById("add-btn").addEventListener("click", function (event) {
 
   const addMoney = getInputFieldIdValueById("input-fild-amount");
   const pinNumber = getInputFieldIdValueById("input-fild-pin");
-  console.log(addMoney, pinNumber);
-  if (pinNumber === 123456) {
+    console.log(addMoney, pinNumber);
+    if (isNaN(addMoney)) {
+        alert('Falid to add money')
+        return
+        
+    }
+
+  if (pinNumber === 12345) {
     const balance = getTextInputValueById("curren-amount");
 
     const newBalance = addMoney + balance;
     document.getElementById("curren-amount").innerText = newBalance;
     console.log(balance);
+    // added to transtion history
+    const p = document.createElement("p");
+      p.innerText = `Added :${addMoney} TK. New Balance: ${newBalance}`;
+      console.log(p)
+
+      //   should be a common secton
+      document.getElementById("transaction-content").appendChild(p);
   } else {
     alert("Your passwrod is wrong");
   }
